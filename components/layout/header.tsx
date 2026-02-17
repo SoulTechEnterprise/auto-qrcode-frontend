@@ -23,7 +23,7 @@ export function Header() {
           </div>
         </Link>
 
-        <Button size="sm" className="md:size-default">
+        <Button size="sm" className="md:size-default shadow-md transition-all hover:scale-105 hover:shadow-lg">
           Acesse Agora
           <ArrowRight className="ml-2 h-4 w-4" />
         </Button>

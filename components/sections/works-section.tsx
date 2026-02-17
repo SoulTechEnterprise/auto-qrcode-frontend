@@ -25,13 +25,17 @@ export function HowItWorksSection() {
           {HOW_IT_WORKS_STEPS.map((step) => {
             const Icon = STEP_ICONS[step.number as keyof typeof STEP_ICONS]
             return (
-              <div key={step.number} className="text-center">
+              <div key={step.number} className="relative text-center">
+                {step.number < 3 && (
+                  <div className="absolute left-[60%] top-10 hidden h-0.5 w-[80%] bg-linear-to-r from-yellow-300 to-yellow-300/20 md:block" />
+                )}
+                
                 <div className="mb-4 flex justify-center">
                   <div className="relative">
-                    <div className="flex h-20 w-20 items-center justify-center rounded-full bg-yellow-300">
+                    <div className="flex h-20 w-20 items-center justify-center rounded-full bg-yellow-300 shadow-lg shadow-yellow-300/50 transition-all hover:scale-110">
                       <Icon className="h-9 w-9 text-black" strokeWidth={2} />
                     </div>
-                    <div className="absolute -right-1 -top-1 flex h-7 w-7 items-center justify-center rounded-full bg-black text-xs font-bold text-yellow-300">
+                    <div className="absolute -right-1 -top-1 flex h-7 w-7 items-center justify-center rounded-full bg-black text-xs font-bold text-yellow-300 shadow-md">
                       {step.number}
                     </div>
                   </div>
@@ -47,7 +51,7 @@ export function HowItWorksSection() {
         </div>
 
         <div className="text-center">
-          <Button size="lg" className="h-12 px-8 text-base font-semibold">
+          <Button size="lg" className="h-12 px-8 text-base font-semibold shadow-lg transition-all hover:scale-105 hover:shadow-xl">
             Quero economizar com impressões
             <PiggyBank className="ml-2 h-5 w-5" />
           </Button>

@@ -1,5 +1,8 @@
 import type { Metadata } from "next";
 import { Geist, Geist_Mono } from "next/font/google";
+import { Header } from "@/components/layout/header";
+import { Footer } from "@/components/layout/footer";
+import { SITE_CONFIG } from "@/lib/constants";
 import "./globals.css";
 
 const geistSans = Geist({
@@ -13,11 +16,16 @@ const geistMono = Geist_Mono({
 });
 
 export const metadata: Metadata = {
-  title: "Auto QRCode",
-  description: "Crie QR Codes dinâmicos para imóveis",
-  icons:{
+  title: {
+    default: SITE_CONFIG.name,
+    template: `%s | ${SITE_CONFIG.name}`,
+  },
+  description: SITE_CONFIG.description,
+  keywords: ["QR Code", "imóveis", "corretores", "placas de venda", "QR dinâmico"],
+  authors: [{ name: "Auto QRCode" }],
+  icons: {
     icon: "/logo.webp",
-  }
+  },
 };
 
 export default function RootLayout({
@@ -26,11 +34,13 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <html lang="en">
+    <html lang="pt-BR">
       <body
-        className={`${geistSans.variable} ${geistMono.variable} antialiased`}
+        className={`${geistSans.variable} ${geistMono.variable} min-h-screen bg-background antialiased`}
       >
+        <Header />
         {children}
+        <Footer />
       </body>
     </html>
   );
