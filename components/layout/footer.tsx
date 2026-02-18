@@ -11,8 +11,8 @@ export function Footer() {
           <div className="space-y-4">
             <div className="flex items-center gap-3">
               <Image 
-                src="/logo-qrcode.png" 
-                alt="Logo Placa QRCode" 
+                src="/logo-qrcodei.webp" 
+                alt="Logo QRCode Inteligente" 
                 width={64} 
                 height={64}
                 className="shrink-0"

@@ -1,5 +1,5 @@
 export const SITE_CONFIG = {
-  name: "Placa QRCode",
+  name: "QRCode Inteligente",
   tagline: "Nunca mais jogue fora uma placa de Vende-se",
   description: "Atualize o link do imóvel sem trocar o adesivo. QRCodes dinâmicos feitos para corretores de elite.",
 } as const

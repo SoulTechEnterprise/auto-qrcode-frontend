@@ -10,13 +10,6 @@ export function Header() {
       <div className="container mx-auto max-w-6xl flex h-16 items-center justify-between px-4 md:px-8">
         <Link href="/" className="flex items-center space-x-2">
           <div className="flex items-center gap-2 md:gap-3">
-            <Image 
-              src="/logo-qrcode.png" 
-              alt="Logo Placa QRCode" 
-              width={64} 
-              height={64}
-              className="h-12 w-12 shrink-0 md:h-16 md:w-16"
-            />
             <span className="text-lg font-bold md:text-2xl">
               {SITE_CONFIG.name}
             </span>
