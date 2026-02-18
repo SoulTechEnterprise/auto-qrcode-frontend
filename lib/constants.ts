@@ -1,5 +1,5 @@
 export const SITE_CONFIG = {
-  name: "Auto QRCode",
+  name: "Placa QRCode",
   tagline: "Nunca mais jogue fora uma placa de Vende-se",
   description: "Atualize o link do imóvel sem trocar o adesivo. QRCodes dinâmicos feitos para corretores de elite.",
 } as const
@@ -47,13 +47,21 @@ export const BENEFITS = [
 
 export const PRICING = {
   monthly: {
-    price: 29.90,
+    price: 19.90,
     currency: "R$",
     period: "mês",
-    oldPrice: 49.90,
     features: [
-      "Analítica de scans",
       "Suporte humanizado",
+    ],
+  },
+  annual: {
+    price: 16.90,
+    currency: "R$",
+    period: "mês",
+    yearlyTotal: 202.80,
+    features: [
+      "Suporte humanizado",
+      "2 meses grátis no ano",
     ],
   },
 } as const

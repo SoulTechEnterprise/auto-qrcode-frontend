@@ -22,9 +22,9 @@ export const metadata: Metadata = {
   },
   description: SITE_CONFIG.description,
   keywords: ["QR Code", "imóveis", "corretores", "placas de venda", "QR dinâmico"],
-  authors: [{ name: "Auto QRCode" }],
+  authors: [{ name: "Placa QRCode" }],
   icons: {
-    icon: "/logo.webp",
+    icon: "/logo-qrcode.png",
   },
 };
 

@@ -13,7 +13,7 @@ export function HeroSection() {
           </div>
 
           <h1 className="mb-6 text-3xl font-bold tracking-tight text-foreground md:text-5xl lg:text-6xl">
-            Nunca mais <span className="text-yellow-300">jogue fora</span> uma placa de{" "}
+            Nunca mais <span className="rounded bg-yellow-300 px-4 text-black">jogue fora</span> uma placa de{" "}
             <span className="whitespace-nowrap">&quot;Vende-se&quot;.</span>
           </h1>
 
@@ -25,13 +25,6 @@ export function HeroSection() {
             <QrCode className="mr-2 h-5 w-5" />
             Criar meu primeiro QRCode
           </Button>
-
-          <p className="flex items-center justify-center gap-2 text-sm text-muted-foreground">
-            <span className="flex h-5 w-5 items-center justify-center rounded-full bg-green-500/10 text-green-600">
-              ✓
-            </span>
-            Teste grátis por 7 dias. Sem compromisso.
-          </p>
         </div>
       </div>
     </section>

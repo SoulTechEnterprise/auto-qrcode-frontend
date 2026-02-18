@@ -9,7 +9,7 @@ import { PRICING } from "@/lib/constants"
 
 export function PricingSection() {
   const [billingPeriod, setBillingPeriod] = useState<"monthly" | "annual">("monthly")
-  const plan = PRICING.monthly
+  const plan = PRICING[billingPeriod]
 
   return (
     <section className="bg-muted/30 py-16 md:py-20 lg:py-24">
@@ -19,7 +19,7 @@ export function PricingSection() {
             Planos e Preços
           </h2>
           <p className="mx-auto max-w-2xl text-muted-foreground md:text-lg">
-            Comece grátis por 7 dias. Cancele quando quiser.
+            Escolha o plano ideal para o seu negócio.
           </p>
         </div>
 
@@ -58,21 +58,21 @@ export function PricingSection() {
             </Badge>
             
             {billingPeriod === "annual" && (
-              <Badge className="absolute left-4 top-4 animate-in slide-in-from-left-5 bg-green-500 text-xs font-bold uppercase text-white hover:bg-green-500">
-                Economize 40%
+              <Badge className="absolute left-4 top-4 animate-in slide-in-from-left-5 bg-green-500 px-4 py-1.5 text-xs font-bold uppercase text-white hover:bg-green-500">
+                Economize 15%
               </Badge>
             )}
 
-            <div className="mb-6">
+            <div className={`mb-6 ${billingPeriod === "annual" ? "mt-8" : ""}`}>
               <div className="mb-2 flex items-baseline gap-2">
                 <span className="animate-in fade-in-0 slide-in-from-bottom-3 bg-linear-to-br from-yellow-400 to-yellow-500 bg-clip-text text-5xl font-bold tracking-tight text-transparent duration-500">
                   {plan.currency} {plan.price.toFixed(2).replace('.', ',')}
                 </span>
                 <span className="text-muted-foreground">/{plan.period}</span>
               </div>
-              {plan.oldPrice && (
+              {billingPeriod === "annual" && 'yearlyTotal' in plan && (
                 <p className="text-sm text-muted-foreground">
-                  De <span className="line-through">{plan.currency} {plan.oldPrice.toFixed(2).replace('.', ',')}</span> por apenas
+                  {plan.currency} {plan.yearlyTotal.toFixed(2).replace('.', ',')} cobrado anualmente
                 </p>
               )}
             </div>
@@ -111,10 +111,6 @@ export function PricingSection() {
             >
               Ir para o Checkout
             </Button>
-
-            <p className="mt-4 text-center text-xs text-muted-foreground animate-in fade-in-0 duration-700" style={{ animationDelay: '600ms' }}>
-              7 dias grátis. Cancele quando quiser.
-            </p>
           </Card>
         </div>
       </div>
