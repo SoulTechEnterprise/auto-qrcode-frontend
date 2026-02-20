@@ -27,15 +27,15 @@ export function DemoCardSection() {
                 className="object-cover transition-transform duration-500 group-hover:scale-105"
                 priority
               />
-              
+
               <div className="absolute inset-x-0 bottom-0 h-32 bg-linear-to-t from-black/90 to-transparent" />
-              
+
               <div className="absolute inset-x-0 bottom-0 p-4">
                 <div className="flex items-end gap-3">
                   <div className="flex h-16 w-16 shrink-0 items-center justify-center rounded-lg bg-white p-2 shadow-lg">
                     <QrCode className="h-full w-full text-black" strokeWidth={1.5} />
                   </div>
-                  
+
                   <div className="flex-1 pb-1">
                     <Badge className="mb-1.5 bg-yellow-300 px-2 py-0.5 text-xs font-bold uppercase tracking-wide text-black hover:bg-yellow-300">
                       Status: Ativo

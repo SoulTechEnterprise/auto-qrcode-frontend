@@ -2,7 +2,6 @@ import type { Metadata } from "next";
 import { Geist, Geist_Mono } from "next/font/google";
 import { Header } from "@/components/layout/header";
 import { Footer } from "@/components/layout/footer";
-import { SITE_CONFIG } from "@/lib/constants";
 import "./globals.css";
 
 import Script from 'next/script'
@@ -17,6 +16,19 @@ const geistMono = Geist_Mono({
   variable: "--font-geist-mono",
   subsets: ["latin"],
 });
+
+export const SITE_CONFIG = {
+  name: "QRCode Inteligente",
+  tagline: "Nunca mais jogue dinheiro fora reimprimindo materiais",
+  description: "Mude o destino do seu link quantas vezes quiser sem precisar trocar o QRCode físico. A solução definitiva de QRCodes dinâmicos para o seu negócio.",
+} as const
+
+export const CONTACT_LINKS = {
+  instagram: "https://instagram.com/autoorcode",
+  whatsapp: "https://wa.me/5511999999999",
+  termsOfUse: "/termos-de-uso",
+  privacyPolicy: "/politica-privacidade",
+} as const
 
 export const metadata: Metadata = {
   title: {

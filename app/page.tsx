@@ -8,7 +8,6 @@ export default function Home() {
   return (
     <main>
       <HeroSection />
-      <DemoCardSection />
       <HowItWorksSection />
       <BenefitsSection />
       <PricingSection />

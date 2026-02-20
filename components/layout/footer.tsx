@@ -1,6 +1,6 @@
 import Link from "next/link"
 import Image from "next/image"
-import { SITE_CONFIG, CONTACT_LINKS } from "@/lib/constants"
+import { SITE_CONFIG, CONTACT_LINKS } from "@/app/layout.tsx"
 import { FileText } from "lucide-react"
 
 export function Footer() {
@@ -10,10 +10,10 @@ export function Footer() {
         <div className="grid gap-8 md:grid-cols-2">
           <div className="space-y-4">
             <div className="flex items-center gap-3">
-              <Image 
-                src="/logo-qrcodei.webp" 
-                alt="Logo QRCode Inteligente" 
-                width={64} 
+              <Image
+                src="/logo-qrcodei.webp"
+                alt="Logo QRCode Inteligente"
+                width={64}
                 height={64}
                 className="shrink-0"
               />

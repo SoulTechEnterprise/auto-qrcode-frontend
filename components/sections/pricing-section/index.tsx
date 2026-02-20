@@ -5,10 +5,33 @@ import { Card } from "@/components/ui/card"
 import { Button } from "@/components/ui/button"
 import { Badge } from "@/components/ui/badge"
 import { Check } from "lucide-react"
-import { PRICING } from "@/lib/constants"
+import Link from "next/link"
+
+const PRICING = {
+  monthly: {
+    price: 29.90,
+    currency: "R$",
+    period: "mês",
+    features: [
+      "Suporte humanizado",
+    ],
+    link: "https://pay.cakto.com.br/d4uhdit_770158"
+  },
+  annual: {
+    price: 19.90,
+    currency: "R$",
+    period: "mês",
+    yearlyTotal: 238.80,
+    features: [
+      "Suporte humanizado",
+      "2 meses grátis no ano",
+    ],
+    link: "https://pay.cakto.com.br/3835bg9"
+  },
+} as const
 
 export function PricingSection() {
-  const [billingPeriod, setBillingPeriod] = useState<"monthly" | "annual">("monthly")
+  const [billingPeriod, setBillingPeriod] = useState<"monthly" | "annual">("annual")
   const plan = PRICING[billingPeriod]
 
   return (
@@ -49,14 +72,14 @@ export function PricingSection() {
         </div>
 
         <div className="mx-auto max-w-md">
-          <Card 
+          <Card
             key={billingPeriod}
             className="relative overflow-hidden border-2 border-yellow-300 bg-white p-8 shadow-2xl shadow-yellow-300/20 animate-in fade-in-0 zoom-in-95 duration-300 dark:bg-zinc-950"
           >
             <Badge className="absolute right-4 top-4 bg-yellow-300 text-xs font-bold uppercase text-black hover:bg-yellow-300">
               Popular
             </Badge>
-            
+
             {billingPeriod === "annual" && (
               <Badge className="absolute left-4 top-4 animate-in slide-in-from-left-5 bg-green-500 px-4 py-1.5 text-xs font-bold uppercase text-white hover:bg-green-500">
                 Economize 15%
@@ -91,8 +114,8 @@ export function PricingSection() {
                 <span className="text-sm font-medium">Redirecionamentos ilimitados</span>
               </li>
               {plan.features.map((feature, index) => (
-                <li 
-                  key={index} 
+                <li
+                  key={index}
                   className="flex items-center gap-3 animate-in fade-in-0 slide-in-from-left-3 duration-300"
                   style={{ animationDelay: `${300 + (index * 100)}ms` }}
                 >
@@ -104,12 +127,13 @@ export function PricingSection() {
               ))}
             </ul>
 
-            <Button 
-              size="lg" 
+            <Button
+              size="lg"
               className="w-full h-12 text-base font-semibold shadow-lg shadow-yellow-300/20 transition-all hover:scale-105 hover:shadow-xl hover:shadow-yellow-400/30 animate-in fade-in-0 slide-in-from-bottom-4 duration-500"
               style={{ animationDelay: '500ms' }}
+              asChild
             >
-              Ir para o Checkout
+              <Link href={plan.link}>Ir para o Checkout</Link>
             </Button>
           </Card>
         </div>

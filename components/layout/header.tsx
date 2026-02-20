@@ -1,7 +1,7 @@
 import Link from "next/link"
 import Image from "next/image"
 import { Button } from "@/components/ui/button"
-import { SITE_CONFIG } from "@/lib/constants"
+import { SITE_CONFIG } from "@/app/layout.tsx"
 import { ArrowRight } from "lucide-react"
 
 export function Header() {
@@ -16,9 +16,11 @@ export function Header() {
           </div>
         </Link>
 
-        <Button size="sm" className="bg-yellow-300 text-black shadow-md transition-all hover:bg-yellow-400 hover:scale-105 hover:shadow-lg md:size-default">
-          Assinar Agora
-          <ArrowRight className="ml-2 h-4 w-4" />
+        <Button asChild size="sm" className="bg-yellow-300 text-black shadow-md transition-all hover:bg-yellow-400 hover:scale-105 hover:shadow-lg md:size-default">
+          <Link href="https://pay.cakto.com.br/3835bg9">
+            Assinar Agora
+            <ArrowRight className="ml-2 h-4 w-4" />
+          </Link>
         </Button>
       </div>
     </header>
