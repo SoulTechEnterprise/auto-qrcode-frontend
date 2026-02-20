@@ -1,7 +1,7 @@
 import Link from "next/link"
 import Image from "next/image"
 import { Button } from "@/components/ui/button"
-import { SITE_CONFIG } from "@/app/layout.tsx"
+import { SITE_CONFIG } from "@/app/layout"
 import { ArrowRight } from "lucide-react"
 
 export function Header() {

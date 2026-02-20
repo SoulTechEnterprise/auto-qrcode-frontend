@@ -1,6 +1,6 @@
 import Link from "next/link"
 import Image from "next/image"
-import { SITE_CONFIG, CONTACT_LINKS } from "@/app/layout.tsx"
+import { SITE_CONFIG, CONTACT_LINKS } from "@/app/layout"
 import { FileText } from "lucide-react"
 
 export function Footer() {

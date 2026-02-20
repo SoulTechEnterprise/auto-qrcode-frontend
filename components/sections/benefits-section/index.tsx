@@ -2,12 +2,12 @@ import { Card } from "@/components/ui/card"
 import { House, Utensils, Calendars, Hospital, School, Box } from "lucide-react"
 
 const BENEFIT_ICONS = {
-  1: House,
-  2: Utensils,
-  3: Calendars,
-  4: Hospital,
-  5: School,
-  6: Box,
+  "1": House,
+  "2": Utensils,
+  "3": Calendars,
+  "4": Hospital,
+  "5": School,
+  "6": Box,
 } as const
 
 const BENEFITS = [

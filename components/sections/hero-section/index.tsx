@@ -1,5 +1,5 @@
 import { Button } from "@/components/ui/button"
-import { SITE_CONFIG } from "@/lib/constants"
+import { SITE_CONFIG } from "@/app/layout"
 import { QrCode } from "lucide-react"
 
 import Link from "next/link"
