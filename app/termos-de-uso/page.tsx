@@ -1,6 +1,6 @@
 import Link from "next/link"
 import { ArrowLeft } from "lucide-react"
-import { SITE_CONFIG } from "@/lib/constants"
+import { SITE_CONFIG } from "@/app/layout"
 import type { Metadata } from "next"
 
 export const metadata: Metadata = {
