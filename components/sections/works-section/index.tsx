@@ -36,7 +36,7 @@ export function HowItWorksSection() {
             Como Funciona
           </h2>
           <p className="mx-auto max-w-2xl text-muted-foreground md:text-lg">
-            Em 3 passos simples, você economiza tempo e dinheiro com suas placas imobiliárias
+            Em 3 passos simples, você economiza tempo e dinheiro com seus materiais
           </p>
         </div>
 
