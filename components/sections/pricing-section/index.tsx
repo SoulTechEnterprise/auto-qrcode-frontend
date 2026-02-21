@@ -24,7 +24,7 @@ const PRICING = {
     yearlyTotal: 238.80,
     features: [
       "Suporte humanizado",
-      "2 meses grátis no ano",
+      "4 meses grátis no ano",
     ],
     link: "https://pay.cakto.com.br/3835bg9"
   },
